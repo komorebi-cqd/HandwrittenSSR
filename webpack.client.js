@@ -1,10 +1,10 @@
 const path = require("path");
-const baseConfig = require("./webpack.server");
-const webpackMerge = require("webpack-merge");
+const baseConfig = require("./webpack.base");
+const {merge} = require("webpack-merge");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 const clientConfig = {
-    devtools: "source-map",
+    devtool: "source-map",
     entry: "./src/client",
     output:{
         filename: "js/bundle.[hash:5].js",
@@ -17,4 +17,4 @@ const clientConfig = {
     ]
 }
 
-module.exports = webpackMerge(baseConfig,clientConfig);
+module.exports = merge(baseConfig,clientConfig);
