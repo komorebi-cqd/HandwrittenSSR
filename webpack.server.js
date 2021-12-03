@@ -1,16 +1,32 @@
-const path = require("path");
 
+const path = require("path");
 const baseConfig = require("./webpack.base");
 const nodeExternals = require("webpack-node-externals");
-const {merge} = require("webpack-merge");
+const { merge } = require("webpack-merge");
 const serverConfig = {
     target: "node",
-    devtool: false,
+    devtool: "eval-cheap-module-source-map",
     entry: "./src/server",
     output: {
-        filename: "server.js"
+        filename: "server.js",
+        path: path.resolve(__dirname, "./dist")
     },
-    externals: [nodeExternals()],
+    module: {
+        rules: [
+            {
+                test: /\.css$/,
+                use: [
+                    "isomorphic-style-loader", {
+                        loader: "css-loader",
+                        options: {
+                            modules: true,
+                            esModule: false,
+                        }
+                    }
+                ]
+            }
+        ]
+    }
 }
 
-module.exports = merge(baseConfig,serverConfig);
+module.exports = merge(baseConfig, serverConfig);

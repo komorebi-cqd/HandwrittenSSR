@@ -14,6 +14,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _pages_Home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/pages/Home */ "./src/pages/Home/index.jsx");
+/* harmony import */ var _assets_global_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../assets/global.css */ "./src/assets/global.css");
+
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
@@ -33,15 +35,50 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ Home)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.css */ "./src/pages/Home/index.css");
+
 
 function Home() {
   const [n, setN] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, n), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", {
+    className: _index_css__WEBPACK_IMPORTED_MODULE_1__["default"].number
+  }, n), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    className: "button",
     onClick: () => {
       setN(n + 1);
     }
   }, "+"));
 }
+
+/***/ }),
+
+/***/ "./src/assets/global.css":
+/*!*******************************!*\
+  !*** ./src/assets/global.css ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"button":"erptpVb9pDCJUOlwH6vY"});
+
+/***/ }),
+
+/***/ "./src/pages/Home/index.css":
+/*!**********************************!*\
+  !*** ./src/pages/Home/index.css ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"number":"aX4eX2t5VzD0ufh26BeH"});
 
 /***/ }),
 
@@ -29930,4 +29967,4 @@ react_dom__WEBPACK_IMPORTED_MODULE_1__.hydrate( /*#__PURE__*/react__WEBPACK_IMPO
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle.89e2f.js.map
+//# sourceMappingURL=bundle.715a2.js.map
