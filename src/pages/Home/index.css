@@ -2,3 +2,19 @@
     color: lightseagreen;
     font-weight: bold;
 }
+
+.button{
+    background-color: rgb(51, 204, 255);
+    outline: none;
+    border: none;
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    
+}
+.button:hover{
+    background-color: rgb(0, 191, 255);
+}

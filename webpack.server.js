@@ -11,6 +11,10 @@ const serverConfig = {
         filename: "server.js",
         path: path.resolve(__dirname, "./dist")
     },
+    externalsPresets: { node: true },
+    externals: [
+        nodeExternals()
+    ],
     module: {
         rules: [
             {

@@ -7,7 +7,7 @@ export default function Home() {
     return (
         <div>
             <h3 className={styles.number}>{n}</h3>
-            <button className="button" onClick={() => {
+            <button className={styles.button} onClick={() => {
                 setN(n+1)
             }}>+</button>
         </div>
